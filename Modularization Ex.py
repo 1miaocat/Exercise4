@@ -101,3 +101,27 @@ def char_freq(string):
 
 print(char_freq('aaaa'))
 
+#12
+def make_forms(verb):
+    for i in verb:
+        if i.endswith('y'):
+            result = i.replace(i[-1], 'ies')
+            # return result
+        elif i.endswith(('o', 'cs', 's', 'sh', 'z')):
+            result = i + 'es'
+            # return result
+        else:
+            result = i + 's'
+        print(result)
+make_forms(['try', 'brush', 'run', 'fix'])
+
+#13
+def make_forming(verb):
+    for i in verb:
+        if i.endswith('e') and not i.endswith('ie'):
+            result = i.replace(i[-1], 'ing')
+        elif i.endswith('ie'):
+            result = i.replace(i[-2:], 'y') + 'ing'
+    print(result)
+
+make_forming(['lie'])
