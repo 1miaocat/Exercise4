@@ -91,12 +91,12 @@ def check_if_pangram(word):
 
 #11
 def char_freq(string):
-    freq = 0
+    freq = {}
     for i in string:
         if i in freq:
-            freq += 1
+            freq[i] += 1
         else:
-            freq = 1
+            freq[i] = 1
     return freq
 
 print(char_freq('aaaa'))
